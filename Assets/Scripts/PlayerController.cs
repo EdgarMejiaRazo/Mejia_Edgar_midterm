@@ -18,14 +18,14 @@ public class PlayerController : MonoBehaviour
     private bool isGrounded = false;
     private bool isDucking = false;
     private bool isFacingRight = true;
-    //AudioSource jumpSound;
+    
 
     // Start is called before the first frame update
     void Start()
     {
         rBody = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        //jumpSound = GetComponent<AudioSource>();
+        
     }
 
     //pHYSICS
@@ -43,10 +43,10 @@ public class PlayerController : MonoBehaviour
          isGrounded = false;
         }
 
-        //Jump
+        //Ducking
         if (isGrounded && Input.GetAxis("Vertical") < 0)
         {
-            //jumpSound.Play();
+            
 
             isDucking = true;
         }
